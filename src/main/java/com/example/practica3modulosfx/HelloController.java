@@ -101,11 +101,11 @@ public class HelloController {
         }
     }
 
-
+    //Esta función la he copiado de Ventana, es sólo de prueba y no he logrado nada
     @FXML
     protected void onMostrarDatosButtonClick() {
         Node source = (Node) botonMostrar;     //Me devuelve el elemento al que hice click
-        Stage stage = (Stage) source.getScene();
+        Stage stage = (Stage) source.getScene().getWindow();
         System.out.println(stage);
         //etiquetaNombreYApellidos.setText(HelloController.campoNombre.getText()+" "+campoApellidos.getText());
     }
