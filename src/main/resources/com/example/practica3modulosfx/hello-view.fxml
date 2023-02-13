@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practica3modulosfx.HelloController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
@@ -43,11 +43,11 @@
                      <font>
                         <Font name="Arial Bold" size="12.0" />
                      </font></Label>
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="campoNombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="campoApellidos" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="campoNif" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="campoCodigoPostal" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="campoCorreoElectronico" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                   <Label prefHeight="17.0" prefWidth="204.0" text="Datos del alumno" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                      <font>
                         <Font name="Arial Bold" size="14.0" />
@@ -81,7 +81,7 @@
                   <CheckBox mnemonicParsing="false" text="Programación" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
                   <CheckBox mnemonicParsing="false" text="Diseño de Interfaces" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
                   <CheckBox mnemonicParsing="false" text="Acceso a Datos" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
-                  <Label text="Módulos" GridPane.halignment="CENTER">
+                  <Label text="Módulos" GridPane.halignment="LEFT">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -94,21 +94,22 @@
                   <Label text="200" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                   <Label text="75" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
                   <Label text="125" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-                  <Label text="Horas cubiertas:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                  <Label text="Horas cubiertas:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font></Label>
-                  <Label text="Horas máximas:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                  <Label text="Horas máximas:" GridPane.columnIndex="2" GridPane.halignment="CENTER">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <Label text="325" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                  <Label text="325" GridPane.columnIndex="3" GridPane.halignment="LEFT">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <Label text="0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Label text="0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button fx:id="botonMostrar" mnemonicParsing="false" onAction="#onMostrarButtonClick" prefHeight="25.0" prefWidth="189.0" text="Mostrar" GridPane.columnIndex="2" GridPane.rowIndex="4" />
                </children>
                <padding>
                   <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
