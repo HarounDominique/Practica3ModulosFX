@@ -34,6 +34,7 @@ public class HelloController {
     @FXML
     private Button botonMostrar;
 
+    private Alumno alumno;
 
     @FXML
     protected void onMostrarButtonClick() {
@@ -45,9 +46,29 @@ public class HelloController {
         System.out.println("Correo electrónico: "+campoCorreoElectronico.getText());
         */
 
+        // Cargo la vista
+        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("VentanaEmergente.fxml"));
+        Parent root;
+        // Cargo la ventana
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        Stage stage = new Stage();
+
+        stage.setUserData(alumno);
+        // Creo el Scene
+        Scene scene = new Scene(root);
+        stage.setTitle("Datos matricula alumnado!");
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(scene);
+        stage.showAndWait();
+        /*
         Node source = (Node) botonMostrar;     //Me devuelve el elemento al que hice click
         Stage stage = (Stage) source.getScene().getWindow();
         System.out.println(stage);
+         */
         //etiquetaNombreYApellidos.setText(HelloController.campoNombre.getText()+" "+campoApellidos.getText());
     }
 
