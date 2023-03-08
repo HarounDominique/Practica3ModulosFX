@@ -8,9 +8,9 @@ public class Alumno {
     private  String email;
     private  String codigoPostal;
     private  String nif;
-    ArrayList<String> modulos;
+    ArrayList<Modulo> modulos;
 
-    public Alumno(String nombre, String apellidos, String email, String codigoPostal, String nif, ArrayList<String> modulos) {
+    public Alumno(String nombre, String apellidos, String email, String codigoPostal, String nif, ArrayList<Modulo> modulos) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.email = email;
