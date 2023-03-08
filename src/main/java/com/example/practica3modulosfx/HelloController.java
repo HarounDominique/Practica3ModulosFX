@@ -59,12 +59,12 @@ public class HelloController {
         else {
             guardar();
 
-            //Al pulsar el botón guardar desactivo Cancelar
-            cancelar.setDisable(true);
+            //Al pulsar el botón guardar desactivo Cancelar (pendiente de implementar 'cancelar'
+            //cancelar.setDisable(true);
             try {
 
                 // Cargo la vista
-                FXMLLoader loader = new FXMLLoader(CiclosApplication.class.getResource("VentanaMostrar.fxml"));
+                FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("ventanaEmergente.fxml"));
                 // Cargo la ventana
                 Parent root = loader.load();
                 Stage stage = new Stage();
